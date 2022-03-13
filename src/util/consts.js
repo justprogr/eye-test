@@ -1,4 +1,4 @@
-export const ANIMALS_ICONS = [
+export const ANIMAL_ICONS = [
   {
     icon: 'bat',
     width: 60,
@@ -37,7 +37,7 @@ export const ANIMALS_ICONS = [
   }
 ]
 
-export const ANIMALS_DESCRIPTIONS = {
+export const ANIMAL_DESCRIPTIONS = {
   bat: 'Your color vision is not something to write home about. Bats live in the dark and rely on other senses than sight, and that\'s what you should do too.',
   mole: 'You have moderate color vision. You see your closest perimeter but don\'t go on any big adventures as you will probably get lost.',
   dog: 'You have decent color vision. You see most of the sticks that are thrown to you but sometimes you\'re just lost.',

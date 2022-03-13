@@ -1,10 +1,10 @@
 <script setup>
 import { ref, inject, computed } from 'vue'
-import { ANIMALS_ICONS } from '@/util/consts.js'
+import { ANIMAL_ICONS } from '@/util/consts.js'
 
 const score = inject('score')
 const percent = computed(() => score.value / 29 * 100)
-const animals = ref([...ANIMALS_ICONS])
+const animals = ref([...ANIMAL_ICONS])
 </script>
 
 <template>

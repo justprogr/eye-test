@@ -1,10 +1,10 @@
 <script setup>
 import { inject, computed } from 'vue'
-import { ANIMALS_ICONS, ANIMALS_DESCRIPTIONS } from '@/util/consts.js'
+import { ANIMAL_ICONS, ANIMAL_DESCRIPTIONS } from '@/util/consts.js'
 
 const score = inject('score')
-const animal = computed(() => ANIMALS_ICONS.findLast(item => item.activeFrom <= score.value) || ANIMALS_ICONS[0])
-const animalDescription = computed(() => animal && ANIMALS_DESCRIPTIONS[animal.value.icon])
+const animal = computed(() => ANIMAL_ICONS.findLast(item => item.activeFrom <= score.value) || ANIMAL_ICONS[0])
+const animalDescription = computed(() => animal && ANIMAL_DESCRIPTIONS[animal.value.icon])
 
 defineProps({
   errors: {
