@@ -70,7 +70,7 @@ function restartGame() {
 }
 
 .youranimal {
-  color: #3d9fe7;
+  color: var(--color-blue-light-1);
 }
 
 .values {
@@ -82,10 +82,10 @@ function restartGame() {
 }
 
 .description {
-  color: #525252;
+  color: var(--color-gray);
   padding: 14px;
   font-size: 18px;
-  background-color: #e9f4fb;
+  background-color: var(--color-blue-light-3);
   border-radius: 6px;
   max-width: 340px;
   width: 100%;
@@ -109,13 +109,13 @@ function restartGame() {
   width: 100%;
   max-width: 340px;
   height: 50px;
-  color: #fff;
+  color: var(--color-white);
   font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 6px;
   border: none;
-  background-color: #3d9fe7;
+  background-color: var(--color-blue-light-1);
 
   svg {
     position: absolute;

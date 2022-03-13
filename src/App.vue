@@ -27,6 +27,17 @@ import LevelsBar from '@/components/LevelsBar'
 </template>
 
 <style lang="scss">
+:root {
+  --color-white: #fff;
+  --color-gray: #525252;
+  --color-red: #ef3d4e;
+  --color-blue: #2c6dac;
+  --color-blue-light-1: #3d9fe7;
+  --color-blue-light-2: #C5E0EE;
+  --color-blue-light-3: #e9f4fb;
+  --color-bright-green: #A1DF3C;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,13 +63,13 @@ body {
   width: 100%;
   z-index: 100;
   padding: 8px 0;
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow:
     0 -2px 0 rgba(18, 115, 180, .2) inset,
     0 0 15px rgba(0, 0, 0, .38);
 
   .logo {
-    color: #2c6dac;
+    color: var(--color-blue);
     font-size: 28px;
     font-weight: bold;
     display: flex;

@@ -66,7 +66,7 @@ function squareClick(index) {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .matrix {
   width: 340px;
   height: 340px;

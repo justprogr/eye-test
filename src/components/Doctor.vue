@@ -26,31 +26,31 @@ onMounted(() => {
   </div>
 </template>
 
-<style lang="scss">
-  .doctor {
-    position: relative;
-    margin-top: 40px;
-    margin-right: -20px;
-    z-index: 50;
+<style lang="scss" scoped>
+.doctor {
+  position: relative;
+  margin-top: 40px;
+  margin-right: -20px;
+  z-index: 50;
 
-    .bubble {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      width: 205px;
-      height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: 500;
-      text-align: center;
-      color: #525252;
+  .bubble {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 205px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-gray);
 
-      span {
-        font-size: 36px;
-        font-weight: bold;
-      }
+    span {
+      font-size: 36px;
+      font-weight: bold;
     }
   }
+}
 </style>

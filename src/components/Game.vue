@@ -80,7 +80,7 @@ function gameOver() {
   text-transform: uppercase;
   padding: 20px 20px 25px 25px;
   border-radius: 6px;
-  background-color: white;
+  background-color: var(--color-white);
   box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
 
   .timer {
@@ -91,7 +91,7 @@ function gameOver() {
   }
 
   .title {
-    color: #525252;
+    color: var(--color-gray);
     font-size: 26px;
     font-weight: bold;
     margin-right: 45px;

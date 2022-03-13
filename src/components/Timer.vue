@@ -74,37 +74,37 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
-  .timer {
-    color: #A1DF3C;
-    font-size: 56px;
-    font-weight: bold;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 98px;
-    width: 98px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 5px solid #3A9FE3;
+<style lang="scss" scoped>
+.timer {
+  color: var(--color-bright-green);
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98px;
+  width: 98px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 5px solid var(--color-blue-light-1);
 
-    &--danger {
-      color: #ef3d4e;
-      border-color: #ef3d4e;
-    }
-
-    .value {
-      display: flex;
-      align-items: flex-end;
-      margin-left: -2px;
-    }
-
-    .ms {
-      width: 30px;
-      font-size: 30px;
-      text-align: left;
-      padding-bottom: 3px;
-    }
+  &--danger {
+    color: var(--color-red);
+    border-color: var(--color-red);
   }
+
+  .value {
+    display: flex;
+    align-items: flex-end;
+    margin-left: -2px;
+  }
+
+  .ms {
+    width: 30px;
+    font-size: 30px;
+    text-align: left;
+    padding-bottom: 3px;
+  }
+}
 </style>

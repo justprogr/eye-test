@@ -28,7 +28,7 @@ defineProps({
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .score {
   width: 135px;
   margin-top: 40px;
@@ -42,8 +42,8 @@ defineProps({
   }
 
   .value {
-    color: #fff;
-    background-color: #3d9fe7;
+    color: var(--color-white);
+    background-color: var(--color-blue-light-1);
     font-size: 28px;
     font-weight: bold;
     border-radius: 6px;
@@ -55,7 +55,7 @@ defineProps({
     }
 
     &:last-child {
-      background-color: #d92c3b;
+      background-color: var(--color-red);
     }
   }
 }

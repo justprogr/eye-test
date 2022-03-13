@@ -42,57 +42,54 @@ const animals = ref([...ANIMAL_ICONS])
 </template>
 
 <style lang="scss" scoped>
-  .levels-bar {
-    color: #3a8fcd;
-    text-transform: uppercase;
-  }
+.levels-bar {
+  color: var(--color-blue-light-1);
+  text-transform: uppercase;
+}
 
-  .title {
-    font-size: 22px;
-    padding: 0 22px;
-    margin-bottom: 15px;
-  }
+.title {
+  font-size: 22px;
+  padding: 0 22px;
+  margin-bottom: 15px;
+}
 
-  .list {
+.list {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 15px 15px;
+  background-image: url(../assets/acs_bg.png);
+  background-repeat: no-repeat;
+
+  &-item {
     display: flex;
-    border-radius: 20px;
-    padding: 15px 30px;
-    background-image: url(../assets/acs_bg.png);
-    background-repeat: no-repeat;
+    align-items: center;
+    flex-direction: column;
+    text-transform: none;
 
-    &-item {
+    .badge {
       display: flex;
       align-items: center;
-      flex-direction: column;
-      text-transform: none;
+      justify-content: center;
+      height: 128px;
+      width: 128px;
+      border-radius: 50%;
+      color: var(--color-blue-light-1);
+      background-color: var(--color-white);
+      box-shadow: 5px 5px 0 var(--color-blue-light-2);
+      margin-bottom: 8px;
+      font-size: 20px;
 
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
-
-      .badge {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 128px;
-        width: 128px;
-        border-radius: 50%;
-        color: #3d9fe7;
-        background-color: #fff;
-        box-shadow: 5px 5px 0 #C5E0EE;
-        margin-bottom: 8px;
-        font-size: 20px;
-
-        &--active {
-          color: #fff;
-          background-color: #3d9fe7;
-        }
-      }
-
-      span {
-        font-size: 16px;
-        font-weight: 500;
+      &--active {
+        color: var(--color-white);
+        background-color: var(--color-blue-light-1);
       }
     }
+
+    span {
+      font-size: 16px;
+      font-weight: 500;
+    }
   }
+}
 </style>
