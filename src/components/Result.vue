@@ -67,6 +67,10 @@ function restartGame() {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1010px) {
+    padding: 20px 30px;
+  }
 }
 
 .youranimal {
@@ -121,7 +125,7 @@ function restartGame() {
     position: absolute;
     width: 28px;
     height: 28px;
-    right: 15px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
   }

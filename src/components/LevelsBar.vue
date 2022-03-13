@@ -92,4 +92,51 @@ const animals = ref([...ANIMAL_ICONS])
     }
   }
 }
+
+@media screen and (max-width: 950px) {
+  .list-item {
+    .badge {
+      height: 12vw;
+      width: 12vw;
+
+      svg {
+        transform: scale(.7);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .list {
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .list-item {
+    .badge svg {
+      transform: scale(.5);
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .list-item {
+    span {
+      font-size: 12px;
+    }
+  }
+}
 </style>

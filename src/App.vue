@@ -80,6 +80,16 @@ body {
       margin-left: 10px;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .logo {
+      font-size: 24px;
+
+      .subtitle {
+        display: none;
+      }
+    }
+  }
 }
 
 .main {
@@ -92,5 +102,9 @@ body {
   align-items: flex-start;
   justify-content: flex-end;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 1010px) {
+    justify-content: center;
+  }
 }
 </style>

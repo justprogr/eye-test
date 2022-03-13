@@ -106,5 +106,11 @@ export default {
     text-align: left;
     padding-bottom: 3px;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 38px;
+    height: 78px;
+    width: 78px;
+  }
 }
 </style>

@@ -52,5 +52,9 @@ onMounted(() => {
       font-weight: bold;
     }
   }
+
+  @media screen and (max-width: 1010px) {
+    display: none;
+  }
 }
 </style>

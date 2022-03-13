@@ -101,5 +101,32 @@ function gameOver() {
   .body {
     display: flex;
   }
+
+  @media screen and (max-width: 600px) {
+    .title {
+      font-size: 20px;
+    }
+
+    .body {
+      flex-direction: column;
+
+      .score {
+        margin-top: 15px;
+        margin-left: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        .item {
+          margin: 0;
+        }
+
+        .label {
+          font-size: 14px;
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 </style>
