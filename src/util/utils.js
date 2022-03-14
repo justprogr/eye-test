@@ -50,3 +50,13 @@ export function saveBestResult(result) {
     localStorage.setItem('best-result', result)
   }
 }
+
+export function getAnimalByScore(animals, score) {
+  if (animals.length && score > 0) {
+    return animals
+      .filter(item => item.activeFrom <= score)
+      .reverse()[0] ||
+      animals[0]
+  }
+  return null
+}

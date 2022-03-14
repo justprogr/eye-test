@@ -1,10 +1,10 @@
 <script setup>
 import { inject, computed } from 'vue'
-import { ANIMAL_ICONS, ANIMAL_DESCRIPTIONS } from '@/util/consts.js'
+import { getAnimalByScore } from '@/util/utils.js'
+import { ANIMAL_LIST } from '@/util/consts.js'
 
 const score = inject('score')
-const animal = computed(() => ANIMAL_ICONS.findLast(item => item.activeFrom <= score.value) || ANIMAL_ICONS[0])
-const animalDescription = computed(() => animal && ANIMAL_DESCRIPTIONS[animal.value.icon])
+const animal = computed(() => getAnimalByScore(ANIMAL_LIST, score.value))
 
 defineProps({
   errors: {
@@ -27,9 +27,11 @@ function restartGame() {
         <span>SCORE: {{ score }}</span>
         <span>ERRORS: {{ errors }}</span>
       </div>
-      <div class="description">
+      <div
+        v-if="animal"
+        class="description"
+      >
         <svg
-          v-if="animal"
           :style="{ width: animal.width }"
           class="youranimal"
           viewBox="0 0 32 32"
@@ -39,7 +41,7 @@ function restartGame() {
         <h3 class="character-title">
           {{ animal.icon }}
         </h3>
-        <p>{{ animalDescription }}</p>
+        <p>{{ animal.description }}</p>
       </div>
       <button
         class="play-btn"
