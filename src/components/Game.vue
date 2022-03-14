@@ -103,8 +103,11 @@ function gameOver() {
   }
 
   @media screen and (max-width: 600px) {
+    padding: 20px;
+
     .title {
-      font-size: 20px;
+      font-size: 18px;
+      margin-right: 0;
     }
 
     .body {

@@ -70,6 +70,8 @@ function squareClick(index) {
 .matrix {
   width: 340px;
   height: 340px;
+  max-width: 340px;
+  max-height: 340px;
   display: grid;
   grid-row-gap: 4px;
   grid-column-gap: 4px;
@@ -82,6 +84,11 @@ function squareClick(index) {
 
   .its-me {
     background-color: v-bind(activeColor);
+  }
+
+  @media screen and (max-width: 600px) {
+    width: calc(100vw - 74px);
+    height: calc(100vw - 74px);
   }
 }
 </style>
