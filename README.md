@@ -1,24 +1,5 @@
-# eye-test
+# Eye test
 
-## Project setup
-```
-npm install
-```
+A Vue implementation of the [eye test](https://igame.com) game.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Live demo](https://justprogr.github.io/eye-test/)
