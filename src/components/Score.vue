@@ -40,7 +40,8 @@ defineProps({
   flex-direction: column;
 
   .item {
-    width: 135px;
+    width: 100%;
+    max-width: 135px;
 
     &:not(:last-child) {
       margin-bottom: 20px;

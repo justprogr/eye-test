@@ -49,6 +49,7 @@ body {
   font-family: 'Helvetica', Arial, sans-serif;
   background-image: url('./assets/bg-pattern.gif');
   background-repeat: repeat;
+  touch-action: manipulation;
 }
 
 .container {

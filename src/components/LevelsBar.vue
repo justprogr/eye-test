@@ -3,6 +3,7 @@ import { ref, inject, computed } from 'vue'
 import { ANIMAL_LIST } from '@/util/consts.js'
 
 const score = inject('score')
+const vw = inject('vw')
 const percent = computed(() => score.value / 29 * 100)
 const animals = ref([...ANIMAL_LIST])
 </script>
@@ -28,7 +29,7 @@ const animals = ref([...ANIMAL_LIST])
           }"
         >
           <svg
-            :style="{ width }"
+            :width="width * Math.min(vw / 1100, 1)"
             viewBox="0 0 32 32"
           >
             <use :xlink:href="`#${icon}`" />
@@ -93,47 +94,32 @@ const animals = ref([...ANIMAL_LIST])
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1010px) {
   .list-item {
     .badge {
       height: 12vw;
       width: 12vw;
-
-      svg {
-        transform: scale(.7);
-      }
     }
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .title {
     padding: 0;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .list {
     padding: 8px;
+    margin: 0 -8px;
     border-radius: 10px;
   }
 
   .list-item {
-    .badge svg {
-      transform: scale(.5);
+    .badge {
+      box-shadow: 2px 2px 0 var(--color-blue-light-2);
     }
 
-    span {
-      font-size: 13px;
-    }
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .title {
-    font-size: 16px;
-  }
-
-  .list-item {
     span {
       font-size: 12px;
     }
