@@ -41,6 +41,7 @@ export default {
         time.value -= ms
       } else {
         stop()
+        ctx.emit('finish')
       }
     }
 

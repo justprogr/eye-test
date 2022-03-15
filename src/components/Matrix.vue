@@ -10,8 +10,6 @@ const activeColor = ref('gray')
 const matrixSize = ref(2)
 const squaresNumber = computed(() => matrixSize.value ** 2)
 
-let isGameStarted = false
-
 const styles = computed(() => ({
   'grid-template-rows': `repeat(${matrixSize.value}, 1fr)`,
   'grid-template-columns': `repeat(${matrixSize.value}, 1fr)`
@@ -38,15 +36,10 @@ defineExpose({
 })
 
 function squareClick(index) {
-  if (!isGameStarted && index === activeSquare.value) {
-    isGameStarted = true
-  }
-  if (isGameStarted) {
-    if (index === activeSquare.value) {
-      emit('next')
-    } else {
-      emit('miss')
-    }
+  if (index === activeSquare.value) {
+    emit('next')
+  } else if (score.value) {
+    emit('miss')
   }
 }
 </script>
